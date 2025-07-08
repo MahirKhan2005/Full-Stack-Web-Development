@@ -1,0 +1,43 @@
+/* Universal selector */
+* {
+    background-color: blue;
+    color: hotpink;
+
+}
+
+/* Basic selector */
+li {
+    background-color: purple;
+    color: orange;
+    margin: 6px;
+}
+
+/* ID selector */
+#idselec {
+    background-color: lime;
+    color: cadetblue;
+}
+
+/* Class selector */
+.classselec {
+    background-color: red;
+    color: black;
+}
+
+/* Child selector */
+ol>div {
+    background-color: black;
+    color: silver;
+}
+
+/* Descendant Selector */
+body span {
+    background-color: #fff;
+    color: black;
+}
+
+/* Pseudo selector */
+li:nth-child(7) {
+    background-color: yellow;
+    color: blue;
+}
