@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            box-sizing: border-box; /* This sets the size(height or width) of the box equal to content height + padding + border, i.e, in this case the height 100px includes the height of content, boreder and padding. Without this, content will alone be of height 100px and the other two will be extra.*/
+            height: 100px;
+        }
+        .box1{
+            background-color: silver;
+            color:black;
+            margin: 20px;
+            padding: 10px;
+            border: 5px solid blue;
+            border-style:dashed;
+            border-bottom-right-radius: 30px;
+            border-top-left-radius: 30px;
+        }
+        /* Margin Collapse - This happens when margin of two elemnts collide. The greatest margin will be considered. In this example, the first box has 20px margin and second has 30px. So, instead of having 50px gap between the two boxes, it's only 30px due to margin collapse. */
+        .box2{
+            background-color: black;
+            color: silver;
+            margin: 30px;
+            padding: 20px;
+            border: 10px solid red;
+            border-radius: 50px;
+            border-style: double;
+        }
+    </style>
+</head>
+<body>
+    <p class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem laborum aperiam dolore, praesentium quae harum consequatur iure sed eos, odit animi dicta. Natus?</p>
+    <p class="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi numquam perspiciatis eaque soluta rem inventore perferendis. Expedita, veritatis commodi.</p>
+</body>
+</html>

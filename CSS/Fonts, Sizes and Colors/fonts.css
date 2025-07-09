@@ -1,0 +1,51 @@
+* {
+    font-size: larger;
+    margin: 10px;
+}
+
+.fonts {
+    font-family: cursive;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.size {
+    font-size: 45px;
+}
+
+.lineheight {
+    line-height: 50px;
+    background-color: blue;
+    color: white;
+}
+
+.letterspacing {
+    letter-spacing: 5px;
+    background-color: red;
+    color: white;
+}
+.text{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-color: maroon;
+    text-decoration-thickness: 7px;
+    text-decoration-style: wavy;
+    /* text-indent: 20px; */
+}
+.overflow{
+    background-color: violet;
+    margin: 30px;
+    width: 100px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    
+    /* Breaks the words which exceeds the size of the content box and displays the broken part in the next line. */
+    /* word-break: break-all;*/ 
+}
