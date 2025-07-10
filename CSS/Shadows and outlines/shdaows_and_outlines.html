@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows and Outlines</title>
+    <style>
+        *{
+            margin: 20px;
+        }
+        .box1{
+            border: 3px solid blue;
+            box-shadow: 5px 5px gold  ;
+        }
+        .box2{
+            border: 3px solid red;
+            /* Major difference between outline and offset is their position and space. Outlines are outside the border and takes no space unlike borders. */
+            outline: 3px solid black;
+            outline-offset: 4px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        Box 1
+    </div>
+    <div class="box2">
+        Box 2 
+    </div>
+</body>
+</html>
