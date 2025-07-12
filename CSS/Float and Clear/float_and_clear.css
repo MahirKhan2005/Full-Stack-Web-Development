@@ -1,0 +1,14 @@
+img{
+    width: 300px;
+    float: left;
+}
+.cards{
+    border: 2px solid red;
+}
+.card{
+    border: 2px solid blue;
+    padding: 5px;
+}
+div:nth-child(3){
+    clear: left;
+}

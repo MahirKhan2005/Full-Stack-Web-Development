@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 80vh;
+    border: 3px solid red;
+}
+
+.box {
+    width: 5vw;
+    height: 5vw;
+    background-color: rgb(124, 204, 241);
+    border: 2px solid black;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
+/* PROPERTIES APPLIED ON CONTAINER */
+.container{
+    display: flex;
+    justify-content: center; /* justify-content aligns elements on the main axis*/
+    align-items: center; /*align-items aligns elements on the cross axis */
+    flex-direction: row-reverse;
+    flex-wrap: wrap; /* Shortcut -  flex-flow: <flex-direction> <flex-wrap>; */
+    /* align-content: center; */
+    /* Basic difference between align items and align content is that align items target individual elements in the flexbow, whereas align content targets all of the elements(content) as a whole  */
+     gap: 50px; 
+}
+
+/* PROPERTIES APPLIED ON ITEMS */
+.box1{
+    order:1; /* Order means in what order the items will align in flexbox. Default order 0. Lowest order will come first. */
+}
+.box2{
+    order:2;
+}
+.box3{
+    order:3;
+}
+
+.box5{
+    align-self: flex-start;
+}
+.box10{
+    align-self: flex-end;
+}
