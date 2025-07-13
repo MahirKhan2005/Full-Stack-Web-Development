@@ -1,0 +1,20 @@
+.container{
+    width: 90vw;
+    height: 90vh;
+    border: 2px solid rgb(226, 57, 19);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgb(15, 219, 69);
+    transform: rotate(30deg) scale(1.5) skew(20deg) translate(20px);
+    /* Scale magnifies the element */
+    /* Skew stretches the element diagonally */
+    /* Translate moves the object along its axis(either x or y, default is x) */
+    transform-origin: 20px 30px;
+    /* Changes the origin by 20px in x-direction and 30px in y-direction*/
+
+}

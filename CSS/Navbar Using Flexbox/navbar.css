@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+    width: 200px;
+}
+
+ul {
+    display: flex;
+    gap: 50px;
+}
+
+li {
+    list-style-type: none;
+}
+a{
+    color: rgb(62, 61, 61);
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(170, 169, 169);
+}
