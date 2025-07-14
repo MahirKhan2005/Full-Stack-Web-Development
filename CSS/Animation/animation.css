@@ -1,0 +1,23 @@
+.container {
+    background-color: rgb(144, 101, 244);
+    width: 400px;
+    height: 400px;
+}
+
+.box {
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    animation: animation 3s ease-in-out infinite alternate;
+}
+
+@keyframes animation {
+    from {
+        background-color: red;
+    }
+
+    to {
+        transform: translateX(180px) translateY(180px) scale(2) rotate(360deg);
+        background-color: hotpink;
+    }
+}

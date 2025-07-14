@@ -1,0 +1,100 @@
+  /* Using only grid */
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+img {
+    width: 200px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 20px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: rgb(62, 61, 61);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(170, 169, 169);
+}
+
+.download-ultraedit {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    gap: 40px;
+    margin: 60px 20px;
+}
+
+.template {
+    background-color: rgba(244, 242, 242, 0.677);
+    display: grid;
+    gap: 10px;
+    padding: 15px;
+    grid-template-areas: "language language "
+        "middle middle"
+        "32-bit 64-bit";
+    justify-items: center;
+}
+@media (orientation:portrait){
+    .download-ultraedit{
+        grid-template-columns: 1fr;
+    }
+}
+@media (orientation:landscape) and (min-width:800px){
+    .download-ultraedit{
+        grid-template-columns:250px 250px 250px;
+    }
+}
+
+
+.template div:first-child {
+    grid-area: language;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.template div:nth-child(2) {
+    grid-area: middle;
+    color: rgb(141, 144, 147);
+}
+
+.bit-32 {
+    background-color: rgb(65, 181, 212);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    height: 10px;
+    font-size: 10px;
+}
+
+.bit-64 {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    height: 10px;
+    font-size: 10px;
+    font-weight: bold;
+}

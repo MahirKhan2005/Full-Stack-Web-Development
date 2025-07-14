@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .container{
+            background-color: rgb(144, 101, 244);
+            width: 400px;
+            height: 400px;
+        }
+        .box{
+            height: 40px;
+            width: 40px;
+            background-color: rgb(234, 30, 64);
+        }
+        .transform{
+            transform: translateX(180px) translateY(180px) scale(2) rotate(45deg);
+            background-color: hotpink;
+            transition: all 2s ease-in-out 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box transform">
+        </div>
+    </div>
+</body>
+</html>
