@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object fit and position</title>
+    <style>
+        body{
+            display: flex;
+        }
+        .container{
+            height: 500px;
+            width: 500px;
+            background-color: crimson;
+            margin: 20px;
+        }
+        .container2{
+            height: 500px;
+            width: 500px;
+            background-color: crimson;
+            margin: 20px;
+            background-image:url(image.jpg);
+            background-size:contain;
+            background-repeat: 2;
+        }
+        img{
+            width: 500px;
+            height: 500px;
+            object-fit:cover; /*Covers the given width height while maintainning aspect ratio(trims the image) */
+            object-fit: contain; /* Contains the image in the box of the given width and height while maintaining the aspect ratio and without trimming(places the image in the center of the box) */
+            object-position:right;
+            object-position: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="image.jpg" alt="">
+    </div>
+
+    <div class="container2">
+
+    </div>
+</body>
+</html>
