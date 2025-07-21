@@ -1,0 +1,63 @@
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hidden-card {
+            display: flex;
+            position: relative;
+            padding: 20px;
+            margin: 20px;
+            background-color: rgb(57, 54, 54);
+            gap: 10px;
+            border-radius: 10px;
+
+        }
+        .hidden{
+            display: none !important;
+        }
+
+        .hidden-card img {
+            height: 150px;
+            border-radius: 10px;
+        }
+
+        .title {
+            color: white;
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+
+        }
+
+        .hidden-card .content ul {
+            display: flex;
+            gap: 30px;
+            margin-top: 10px;
+        }
+
+        .hidden-card .content ul li:first-child {
+            list-style-type: none;
+        }
+
+        li {
+            color: rgb(138, 130, 130);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .duration {
+            color: white;
+            background-color: rgb(33, 32, 32);
+            height: fit-content;
+            padding: 4px;
+            border-radius: 4px;
+            filter: opacity(80%);
+            position: absolute;
+            top: 140px;
+            left: 235px;
+        }
