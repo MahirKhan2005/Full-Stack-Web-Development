@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Martel Sans", sans-serif;
+    font-size: 15px;
+}
+
+body {
+    background-color: black;
+}
+
+.top-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: -1;
+}
+
+.top-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Resources/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: opacity(0.25);
+    z-index: -2;
+}
+
+.logo {
+    width: max(15vw,15vh);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    position: absolute;
+    top: 0px;
+    left: 10vw;
+    padding-top: 30px;
+}
+@media (max-width:400px) {
+    nav{
+        flex-direction: column;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.language-button,
+.sign-in {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    padding: 2px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 6px 15px;
+    gap: 4px;
+}
+
+.language-button {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: 0.01em solid white;
+}
+
+.sign-in,.get-started {
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+.sign-in:hover,.get-started:hover {
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.744);
+}
+
+.mid-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.email-address {
+    background-color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 1.5rem 1rem 0.5rem;
+    filter: opacity(0.4);
+    border: 1px solid gray;
+}
+
+.email-address::placeholder {
+    color: white;
+    
+}
+.get-started{
+    padding: 9px;
+    font-size: 20px;
+    position: relative;
+    bottom: 5px;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+.trending-now-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.trending-now{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
