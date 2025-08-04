@@ -5,7 +5,7 @@
     padding: 0;
     color: white;
     font-family: "Martel Sans", sans-serif;
-    font-size: 15px;
+    font-size: clamp(min(1vw, 1vh), min(2vw, 2vh), min(3vw, 3vh));
 }
 
 body {
@@ -37,7 +37,7 @@ body {
 }
 
 .logo {
-    width: max(15vw,15vh);
+    width: min(20vw, 20vh);
 }
 
 nav {
@@ -49,8 +49,9 @@ nav {
     left: 10vw;
     padding-top: 30px;
 }
+
 @media (max-width:400px) {
-    nav{
+    nav {
         flex-direction: column;
     }
 }
@@ -69,7 +70,7 @@ nav {
     padding: 2px;
     border-radius: 6px;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 600;
     padding: 6px 15px;
     gap: 4px;
 }
@@ -77,16 +78,18 @@ nav {
 .language-button {
     background-color: rgba(0, 0, 0, 0);
     color: white;
-    border: 0.01em solid white;
+    border: 0.01em solid gray;
 }
 
-.sign-in,.get-started {
+.sign-in,
+.get-started {
     background-color: red;
     color: white;
     border: none;
 }
 
-.sign-in:hover,.get-started:hover {
+.sign-in:hover,
+.get-started:hover {
     cursor: pointer;
     background-color: rgba(255, 0, 0, 0.744);
 }
@@ -97,38 +100,140 @@ nav {
     align-items: center;
     justify-content: center;
     position: relative;
+    padding-top: 20px;
 }
 
 .email-address {
     background-color: rgb(0, 0, 0);
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    padding: 1.5rem 1rem 0.5rem;
+    padding: 10px;
+    border-radius: 5px;
+    width: 20vh;
+    max-width: 30vw;
     filter: opacity(0.4);
     border: 1px solid gray;
 }
 
 .email-address::placeholder {
     color: white;
-    
+
 }
-.get-started{
-    padding: 9px;
-    font-size: 20px;
-    position: relative;
-    bottom: 5px;
+
+.get-started {
     margin-left: 10px;
-    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: max(1.5vw, 1.5vh);
+    font-weight: 600;
+
 }
-.trending-now-container{
+
+.trending-now-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.trending-now{
+
+.trending-now {
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+    margin: 0px 20px;
+}
+
+.top-5 {
+    position: relative;
+}
+
+.top-5 img {
+    border-radius: 10px;
+    height: clamp(max(20vw, 20vh), max(20vw, 20vh), max(25vw, 25vh));
+}
+
+.top-5 span {
+    font-size: max(5vh, 5vw);
+    position: absolute;
+    left: -5px;
+    bottom: -10px;
+    color: black;
+    font-weight: 700;
+    -webkit-text-stroke: 1px white;
+}
+
+.more-reasons-to-join {
+    margin: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.more-reasons-to-join span {
+    font-weight: 700;
+    font-size: min(5vw, 5vh);
+}
+
+.reasons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.reason {
+    background: radial-gradient(circle at bottom left, #2a0030, #0a0a23);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.reason-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.reason-content {
+    width: 30rem;
+}
+
+.reason svg {
+    align-self: center;
+}
+
+.faqs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.faqs span {
+    font-size: 2.5rem;
+    background-color: black;
+    font-weight: 700;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(45, 45, 45);
+    padding: min(3vh, 3vw);
+    font-size: 2rem;
+    width: 80vw;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 0px 10vw;
+    gap: 10px;
+}
+
+a{
+    font-size: 15px;
+    color: rgb(189, 181, 181);
 }
