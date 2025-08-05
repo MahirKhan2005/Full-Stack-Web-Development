@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px 0px 20px;
+    gap: 20px;
+width: 70vw;
+}
+
+img,
+span {
+    background: transparent;
+}
+
+.home button {
+    width: 45px;
+    padding: 10px;
+    border: none;
+    background-color: #1f1f1f;
+    border-radius: 30px;
+}
+
+.search-bar-wrapper {
+    flex-grow: 1;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f1f1f;
+    height: 30px;
+    padding: 15px;
+    border-radius: 30px;
+    gap: 15px;
+    width: 100%;
+}
+
+.search-bar * {
+    border: none;
+    background: transparent;
+}
+
+.search-bar input {
+    font-size: 17px;
+    width: 100%;
+}
+.search-bar input:focus{
+    border: none;
+    outline: none;
+}
+.nav-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    gap: 20px;
+}
+.nav-right .sign-up a{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    transition: transform 0.1s ease-out;
+    color: #a9a9a9;
+}
+.nav-right .sign-up a:hover{
+    transform: scale(1.1);
+    color: white;
+}
+.log-in button{
+    font-size: 15px;
+    font-weight: bolder;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+    transition: transform 0.1s ease-out;
+}
+.log-in button:hover{
+    transform: scale(1.1);
+    background-color: #cbc8c8;
+}
