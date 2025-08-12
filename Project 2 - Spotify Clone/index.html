@@ -7,30 +7,31 @@
     <title>Spotify - Web Player: Music for everyone</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utility.css">
+    <link rel="icon" type="image/png" href="/img/spotify.png">
 </head>
 
 <body>
     <nav>
         <div class="nav-left">
             <div class="logo">
-                <a href="index.html"><img src="logo.svg" alt=""></a>
+                <a href="index.html"><img src="img/logo.svg" alt=""></a>
             </div>
             <div class="home">
-                <button><img src="home.svg" alt=""></button>
+                <button><img src="img/home.svg" alt=""></button>
             </div>
             <div class="search-bar-wrapper">
                 <div class="search-bar">
-                    <img src="search.svg" alt="search">
+                    <img src="img/search.svg" alt="search">
                     <input type="text" id="search-bar" placeholder="What do you want to play?">
                     <div class="flex" style="gap: 15px;">
                         <span style="font-size: 25px;">|</span>
-                        <img src="browse.svg" alt="browse">
+                        <img src="img/browse.svg" alt="browse">
                     </div>
                 </div>
             </div>
             <!-- Search bar mobile version -->
             <div class="mobile-search-icon">
-                <button><img src="search.svg" alt="search"></button>
+                <button><img src="img/search.svg" alt="search"></button>
             </div>
         </div>
         <div class="nav-right">
@@ -47,14 +48,47 @@
         <div class="library">
             <div class="library-top">
                 <h3 style="background-color: #1f1f1f;">Your Library</h3>
-                <button><img src="plus.svg" alt="plus"></button>
+                <button><img src="img/plus.svg" alt="plus"></button>
             </div>
+            <ul class="songs ">
+            </ul>
         </div>
-        <div class="spotify-playlists">
+        <div class="trending-songs">
             <h2>Trending Songs</h2>
+            <div class="card-container flex">
+                <div class="card">
+                    <img src="test-image.jpg" alt="">
+                    <div class="card-title">
+                        Card Title
+                    </div>
+                    <div class="card-description">
+                        Card description
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="test-image.jpg" alt="">
+                    <div class="card-title">
+                        Card Title
+                    </div>
+                    <div class="card-description">
+                        Card description
+                    </div>
+                </div>
+            </div>
+            <div class="play-bar">
+                <div class="song-name" style="width: 45%;"></div>
+                <div class="play-buttons">
+                    <img class="invert" src="/img/previous-stroke-rounded.svg" alt="previous-stroke-rounded">
+                    <img class="invert play" src="/img/play-stroke-rounded.svg" alt="play-stroke-rounded">
+                    <img class="invert" src="/img/next-stroke-rounded.svg" alt="next-stroke-rounded">
+                </div>
+                <div class="song-time"></div>
+                <div class="seek-bar"></div>
+            </div>
         </div>
 
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
