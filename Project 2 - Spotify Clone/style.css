@@ -43,7 +43,6 @@ ul {
 }
 
 .search-bar-wrapper {
-    flex-grow: 1;
     width: 500px;
 }
 
@@ -140,10 +139,10 @@ ul {
     padding: 20px;
 }
 
-.library .library-top {
-    display: flex;
-    background-color: #1f1f1f;
-    justify-content: space-between;
+@media (max-width:1000px) {
+    .library-top{
+        background-color: #1f1f1f;
+    }
 }
 
 .library-top button {
@@ -166,6 +165,9 @@ ul {
 
 .card-container {
     margin: 10px;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -222,23 +224,106 @@ ul {
     background-color: #4a4949;
     cursor: pointer;
 }
-.song-name{
+
+.song-name {
     font-size: 15px;
+    width: 100px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
+
 .play-bar {
-    display: flex;
-    flex-wrap: wrap;
     border-radius: 20px;
     padding: 10px;
-    width: 95%;
+    width: 65vw;
     height: 40px;
     background: linear-gradient(90deg, #ff8c42, #1db954, #1e90ff);
     background-blend-mode: multiply;
     background-color: #494949;
     position: absolute;
     bottom: 10px;
+    right: 10px;
+
 }
-.play{
+.play-bar-top{
+    display: flex;
+    justify-content: space-between;
+}
+.play, .previous, .next {
     cursor: pointer;
+}
+
+.seek-bar {
+    position: relative;
+    cursor: pointer;
+}
+
+.seekbar {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    background: linear-gradient(to right, #1db99f, pink);
+    border-radius: 2px;
+    outline: none;
+}
+.seekbar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Hamburger functionality */
+.library{
+    transition: transform 0.3s ease-in-out;
+}
+.hamburger{
+    display: none;
+}
+
+/* Responsivity */
+@media (max-width:1000px) {
+    .library{
+        transform: translate(-200%);
+        position: absolute;
+        left: 0;
+        top: 8vh;
+        z-index: 3;
+        background-color: black;
+        width: 70vw;
+        height: 90vh;
+    }
+    .library-top{
+        background-color: black;
+    }
+    
+    .card{
+        width: max(16vw,16vh);
+
+    }
+    .card-title{
+        font-size: 2vw;
+    }
+    .card-description{
+        font-size: 1.5vw;
+    }
+    .trending-songs{
+        width: 100vw;
+        margin: 20px;
+        min-height: 90vh;
+    }
+    .play-bar{
+        width: 80vw;
+    }
+    .library.open{
+        transform: translate(0);
+    }
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
 }
